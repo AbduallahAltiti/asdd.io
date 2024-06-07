@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none; 
+ }
+.header{
+    top:0; left:0; right:0;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+ }
+ .header .flex{
+    display: flex;
+    align-items: center;
+    padding:20px;
+    justify-content: space-between;
+    position: relative;
+ }
+ .header .flex .logo{
+    font-size: 30px;
+    color:black;
+ }
+ .header .flex .logo span{
+    color:purple;
+ }
+.header .flex .navbar a{
+    margin:0 10px;
+    font-size: 20px;
+    color:black;
+ }
+ 
+ .header .flex .navbar a:hover{
+    color:red;
+ }
+ 
+ .header .flex .icons div{
+    margin-right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color:black;
+ }
+ 
+ .header .flex .icons div:hover{
+    color:green;
+ }
+ 
+ .header .flex .account-box{
+    position: absolute;
+    top:120%; right:20px;
+    width: 300px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+    padding:20px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: white;
+    display: none;
+    border: 1px solid black;
+    
+   
+ }
+ 
+ .header .flex .account-box.active{
+    display: inline-block;
+    
+ }
+ .header .flex .account-box p{
+    font-size: 15px;
+    margin-bottom: 10px;
+   
+ }
+ .header .flex .account-box p span{
+    color:red;
+ }
+ 
+ .header .flex .account-box .delete-btn{
+    margin-top: 0;
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+ }
+ .header .flex .account-box div{
+    margin-top: 10px;
+    font-size: 15px;
+   color: orange;
+ }
+
+ .dashboard .title{
+
+   font-size: 50px;
+   text-align: center;
+   margin-top: 30px;
+   margin-bottom: 20px;
+   
+}
+ .dashboard .box-container{
+   display: flex;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   
+}
+.dashboard .box-container .box{
+   
+   border-radius: 10px;
+   width: 30%;
+   padding:10px;
+   margin: 10px;
+   background-color: white;
+   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+   border:1px solid black;
+   text-align: center;
+   
+}
+.dashboard .box-container .box h3{
+   font-size: 50px;
+   color:black; 
+}
+.dashboard .box-container .box p{
+   margin-top: 10px;
+   padding:20px;
+   background-color: white;
+   color:black;
+   font-size: 20px;
+   border-radius: 5px;
+   border:1px solid black;
+}
+
+.add-products form{
+   background-color: white;
+   border-radius: 5px;
+   padding:10px;
+   text-align: center;
+   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+   border:1px solid black;
+   max-width: 500px;
+   margin:0 auto;
+}
+.add-products form h3{
+   font-size: 15px;
+   text-transform: uppercase;
+   color:black;
+   margin-bottom: 20px;
+}
+.add-products form .box{
+   width: 100%;
+   background-color: white;
+   border-radius: 5px;
+   margin:10px 0;
+   padding:10px 15px;
+   color:black;
+   font-size: 15px;
+   border:1px solid black;
+}
+.title{
+  text-align: center; 
+  margin: 20px 0;
+  font-size: 40px;
+  color: black;
+}
+.btn{
+   background-color: (92, 30, 30);
+   color: black;
+   padding:5px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.show-products .box-container{
+
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;  
+}
+.show-products .box-container .box{
+   margin: 30px;
+   border: 1px solid black;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+  
+   
+}
+
+.show-products .box-container .box img{
+   width: 200px;
+   height: 200px;
+   border-radius: 10px;
+   
+}
+.show-products .box-container .box .buttons{
+   display: flex;
+  justify-content: space-around;
+}
+
+.option-btn, .delete-btn {
+   font-size: 16px;
+   margin: 10px;
+   background: linear-gradient(135deg, #374062, #505a88);
+   color: white;
+   border-radius: 5px;
+   padding: 10px 20px;
+   flex: 1;
+   text-align: center;
+   text-decoration: none;
+   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   display: inline-block;
+}
+
+.option-btn:hover, .delete-btn:hover {
+   background: linear-gradient(135deg, #505a88, #374062);
+   transform: translateY(-2px);
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:active, .delete-btn:active {
+   transform: translateY(0);
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ 
+
+.edit-product-form{
+   min-height: 100vh;
+   background-color: rgba(0,0,0,.7);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   overflow-y: scroll;
+   position: fixed;
+   top:0; left:0; 
+   z-index: 1200;
+   width: 100%;
+}
+
+.edit-product-form form{
+   width: 400px;
+   padding:10px;
+   text-align: center;
+   border-radius: 8px;
+   background-color: white;
+}
+
+.edit-product-form form img{
+   height: 200px;
+   width:200px;
+   margin-bottom: 10px;
+}
+
+.edit-product-form form .box{
+   margin:5px 0;
+   padding:5px 15px;
+   border:1px solid black;
+   border-radius: 3px;
+   background-color: lightgoldenrodyellow;
+   font-size: 15px;
+   color:black;
+   width: 100%;
+}
+
+
+.orders .box-container{
+   display: flex;
+   justify-content: center;
+}
+.orders .box-container .box{
+   background-color: white;
+   padding:10px;
+   border:1px solid black;
+}
+.orders .box-container .box p{
+   padding-bottom: 10px;
+   font-size: 16px;; 
+}
+.orders .box-container .box p span{
+   color:purple;
+}
+.orders .box-container .box form{
+   text-align: center;
+}
+.orders .box-container .box form select{
+   border-radius: 5px;;
+   margin:10px 0;
+   width: 100%;
+   border:1px solid black;
+   padding:12px 14px;
+   font-size: 16px;
+ 
+}
+
+.users .box-container{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+  
+}
+
+.users .box-container .box{
+   background-color:white;
+   padding:20px;
+   margin: 20px;
+   border:1px solid black;
+   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+   border-radius: 5px;
+   text-align: center;
+   min-width:20%
+}
+
+.users .box-container .box p{
+   padding-bottom: 15px;
+   font-size: 15px;
+   
+}
+
+.users .box-container .box p span{
+   color:purple;
+}
+
+.users .box-container .box .delete-btn{
+   display:block;
+   margin-top: 20px;
+   padding: 10px;
+}
+
+
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #374062, #505a88);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header .logo span {
+            color: #ffcc00;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons .fas {
+            font-size: 20px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .icons .fas:hover {
+            color: #ffcc00;
+        }
+
+        .account-box {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            display: none;
+            width: 250px;
+        }
+
+        .account-box p {
+            margin: 10px 0;
+        }
+
+        .account-box a {
+            color: #374062;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .account-box a:hover {
+            color: #ffcc00;
+        }
+
+        .delete-btn {
+            background: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: #e60000;
+        }
+
+
+
+      body {
+         font-family: 'Arial', sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+      }
+
+      .header {
+         background: #2c3e50;
+         color: #ecf0f1;
+         padding: 10px 0;
+         text-align: center;
+         font-size: 24px;
+      }
+
+      .messages {
+         padding: 20px;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .title {
+         text-align: center;
+         font-size: 36px;
+         margin-bottom: 20px;
+         color: #2c3e50;
+      }
+
+      .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         justify-content: center;
+      }
+
+      .box {
+         background: #ecf0f1;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         padding: 20px;
+         text-align: left;
+         width: 250px;
+         transition: transform 0.3s ease;
+         position: relative;
+      }
+
+      .box:hover {
+         transform: translateY(-10px);
+      }
+
+      .box p {
+         font-size: 16px;
+         color: #2c3e50;
+         margin: 10px 0;
+      }
+
+      .box p span {
+         font-weight: bold;
+         color: #2980b9;
+      }
+
+      .delete-btn {
+         font-size: 16px;
+       margin: 10px;
+      background: linear-gradient(135deg, #374062, #505a88);
+       color: white;
+      border-radius: 5px;
+      padding: 10px 20px;
+       flex: 1;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      }
+
+      .delete-btn:hover {
+         background: linear-gradient(135deg, #505a88, #374062);
+         transform: translateY(-2px);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+         
+      
+
+      .empty {
+         text-align: center;
+         font-size: 18px;
+         color: #7f8c8d;
+      }
+    
+
+
+
+
+      body {
+         font-family: 'Arial', sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+      }
+
+      .header {
+         background:linear-gradient(135deg, #ed5e05, #4060d1);
+         color: #ecf0f1;
+         padding: 10px 0;
+         text-align: center;
+         font-size: 24px;
+      }
+
+      .dashboard {
+         padding: 20px;
+         max-width: 1200px;
+         margin: 0 auto;
+      }
+
+      .title {
+         text-align: center;
+         font-size: 36px;
+         margin-bottom: 20px;
+         color: #2c3e50;
+      }
+
+      .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         justify-content: center;
+      }
+
+      .box {
+         background: #ecf0f1;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         padding: 20px;
+         text-align: center;
+         width: 250px;
+         transition: transform 0.3s ease;
+      }
+
+      .box:hover {
+         transform: translateY(-10px);
+      }
+
+      .box h3 {
+         font-size: 28px;
+         margin: 10px 0;
+         color: #27ae60;
+      }
+
+      .box p {
+         font-size: 18px;
+         color: #7f8c8d;
+      }
+
+      .box:nth-child(odd) {
+         background: #bdc3c7;
+      }
+
+      .box:nth-child(even) {
+         background: #ecf0f1;
+      }
+   
